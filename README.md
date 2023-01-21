@@ -2,7 +2,7 @@
 
 ## Why
 
-- eslint and prettier are setup correctly to works with typescript and react (auto format on save works)
+- Eslint and prettier are setup correctly to works with typescript and react (auto format on save works)
 - Few tweaks that make everything easier or remove bugs
 - Few usefull plugin added and already mapped to control for you
 - LunarVim is easy and fast to setup, you'll spare a really good time to simply git clone that config (Easier to remove or edit than add new stuff)
@@ -17,6 +17,8 @@
 - trouble
 - lsp_signature <- so nice
 - goto-preview <- sooo nice
+
+P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 
 ## How to setup
 
