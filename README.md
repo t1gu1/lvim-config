@@ -2,6 +2,7 @@
 
 ## Why
 
+- I love saving my config on the cloud to get it fast if I change OS or works on another PC.
 - Eslint and prettier are setup correctly to works with typescript and react (auto format on save works)
 - Few tweaks that make everything easier or remove bugs
 - Few usefull plugin added and already mapped to control for you
@@ -9,6 +10,8 @@
 - Add some missing to treesitter
 
 ## Plugin added
+
+Most of the plugins are listed hehere: <https://www.lunarvim.org/docs/plugins/extra-plugins>
 
 - auto-save
 - git-blame
@@ -54,7 +57,7 @@ P.S.
 - There is an auto save (Not sure if the time delay really works)
 - You can modify everything if you want.
 
-## What I would add
+## What I would love to add
 
-- Something to preview image and svg
-- harpoon plugin
+- Something to preview or inline png/svg images (Require other terminal and the result wasn't worth for now)
+- harpoon plugin (Seems like The PrimeaGen will rework it.. So I'll just wait for now)
