@@ -49,7 +49,6 @@ lvim.builtin.which_key.mappings["sR"] = {
 -- lvim.builtin.theme.options.style = "storm"
 
 -- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -143,9 +142,8 @@ lvim.plugins = {
     end
   },
 }
+-- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 
 lvim.lsp.on_attach_callback = function(client, bufnr)
-  -- …
   require "lsp_signature".on_attach()
-  -- …
 end
