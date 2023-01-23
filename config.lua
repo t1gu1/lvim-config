@@ -15,6 +15,11 @@ lvim.builtin.project.patterns = { ".git" }
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode['<C-t>'] = "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>"
 
+lvim.builtin.which_key.mappings['o'] = {
+  ":TermExec cmd='open %:p:h'<cr>",
+  "Open the current file directory"
+}
+
 -- Menu of keymappings
 lvim.builtin.which_key.mappings["r"] = {
   name = "Search and Replace",
@@ -143,7 +148,3 @@ lvim.plugins = {
   },
 }
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-
-lvim.lsp.on_attach_callback = function(client, bufnr)
-  require "lsp_signature".on_attach()
-end
