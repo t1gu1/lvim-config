@@ -15,17 +15,13 @@ lvim.builtin.project.patterns = { ".git" }
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode['<C-t>'] = "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>"
 
+
 lvim.builtin.which_key.mappings['o'] = {
   ":TermExec cmd='open %:p:h'<cr>",
   "Open the current file directory"
 }
 
 -- Menu of keymappings
-lvim.builtin.which_key.mappings["r"] = {
-  name = "Search and Replace",
-  R = { "<cmd>lua require('spectre').open()<cr>", "Global Search and replace" },
-}
-
 lvim.builtin.which_key.mappings["t"] = {
   name = "Types preview",
   d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
@@ -42,10 +38,24 @@ lvim.builtin.which_key.mappings["d"] = {
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
 
--- Replace an item in a menu of keymappings
 lvim.builtin.which_key.mappings["sR"] = {
   "<cmd>lua require('spectre').open()<cr>", "Global Search and replace",
 }
+
+lvim.lsp.buffer_mappings.normal_mode['h'] = nil
+lvim.builtin.which_key.mappings["h"] = {
+  name = "Harpoon",
+  m = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Mark / Add" },
+  h = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Menu toogle" },
+  b = { "<cmd>:lua require('harpoon.ui').nav_prev()<cr>", "Previous" },
+  n = { "<cmd>:lua require('harpoon.ui').nav_next()<cr>", "Next" },
+  q = { "<cmd>:lua require('harpoon.ui').nav_file(1)<cr>", "Go to 1" },
+  w = { "<cmd>:lua require('harpoon.ui').nav_file(2)<cr>", "Go to 2" },
+  e = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Go to 3" },
+  r = { "<cmd>:lua require('harpoon.ui').nav_file(4)<cr>", "Go to 4" },
+  t = { "<cmd>:lua require('harpoon.ui').nav_file(5)<cr>", "Go to 5" },
+}
+
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -57,8 +67,8 @@ lvim.builtin.which_key.mappings["sR"] = {
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.view.side = "left"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -146,5 +156,21 @@ lvim.plugins = {
       }
     end
   },
+  { "ThePrimeagen/harpoon" },
+  {
+    "gbprod/cutlass.nvim",
+    config = function()
+      require("cutlass").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
+    end
+  }
 }
+
+lvim.keys.visual_mode["<leader>d"] = "d"
+
+
+
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile

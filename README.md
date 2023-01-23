@@ -33,24 +33,34 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 ## Basic nice commands
 
 - First, you should learn your basic Vim keybind <https://devhints.io/vim>
+  - P.S. `d` and `dd` are modified to just remove without replacing the yank `y` value. (`cutlass` plugin)
+  - `<leader>d` will act as the defaut `d` like a "cut".
 - Then take a look of LunarVim keybind <https://www.lunarvim.org/docs/keybind-overview>
 
-P.S. I'll repeat some commands, but it feel like it's the nice to know if you wanna try fast.
+### P.S. I'll repeat some commands, but it feel like it's the nice to know if you wanna try fast
 
+- `<leader>o` will open the current directory file in your OS GUI
+- `<leader>h` will open the harpoon options menu
 - `<leader>` Alone, after few seconds, will display a modal with a lot of commands in it
-- `<cr>|` will display terminal 
+- `<cr>|` will display terminal
 - `2<cr>|` will display terminal number 2
-- `/wordToSearch` will hilight words in you file
+- `/wordToSearch` will highlight words in you file
 - `:%s/wordToReplace/wordThatWillReplace` live search and replace in the current file
 - `<leader>r` will open the global search and replace
-- - `n` and `N` will move you to the next or previous word
+  - `n` and `N` will move you to the next or previous word
 - `<cr>h` `<cr>l` `<cr>j` `<cr>k` will make you move to between windows (Example, if a code file is open and the file explorer is open)
 - `<leader>bb` will make you move to you previous tab
 - `<leader>bn` will make you move to the next tab
 - `<cr>s` will save/write you file
-- `<leader>o` will open the current directory file in your OS GUI
 
-P.S.
+### Commands in nvimTree
+
+- `a` Create a new file or folder (By adding `/` to the path, it will be a folder)
+- `x` to files and folder you want to move then press `p` to the place you want move/paste them
+- `r` Rename a file or folder
+
+### Legend
+
 - `<leader>` = spacing bar
 - `<cr>` = ctrl
 - `|` is at the same place where the backslash is \ (Just to say it's really a caracter)
@@ -59,6 +69,8 @@ P.S.
 
 - The things that determine "A Project" is if a ".git folder exist".
 - There is an auto save (Not sure if the time delay really works)
+- `d` and `dd` are modified to just remove without replacing the yank `y` value. (`cutlass` plugin)
+- Harpoon plugin is a sweet plugin `<leader>h` will show you more.
 - You can modify everything if you want.
 
 ## What I would love to add
