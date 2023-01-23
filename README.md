@@ -32,7 +32,10 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 
 ## Basic nice commands
 
-First, you should learn your basic Vim commands. #GoogleIsYouFriend
+- First, you should learn your basic Vim keybind <https://devhints.io/vim>
+- Then take a look of LunarVim keybind <https://www.lunarvim.org/docs/keybind-overview>
+
+P.S. I'll repeat some commands, but it feel like it's the nice to know if you wanna try fast.
 
 - `<leader>` Alone, after few seconds, will display a modal with a lot of commands in it
 - `<cr>|` will display terminal 
@@ -45,6 +48,7 @@ First, you should learn your basic Vim commands. #GoogleIsYouFriend
 - `<leader>bb` will make you move to you previous tab
 - `<leader>bn` will make you move to the next tab
 - `<cr>s` will save/write you file
+- `<leader>o` will open the current directory file in your OS GUI
 
 P.S.
 - `<leader>` = spacing bar
