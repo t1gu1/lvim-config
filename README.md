@@ -41,7 +41,7 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 - :TSUpdate vim
 - :TSUpdate lua
 - :TSUpdate markdown (etc, it will show you the list)
-- Install the nerdsFont from neovim site!
+- Install the nerdsFont from neovim site! https://www.lunarvim.org/docs/configuration/nerd-fonts
 - On mac use iTerm2 (Linux is perfect on a base terminal)
 
 ## Basic nice commands
