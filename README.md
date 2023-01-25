@@ -25,6 +25,11 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 
 ## How to setup
 
+On Mac I recommand to use Kitty terminal.
+It's faster and display things correctly.
+
+<https://sw.kovidgoyal.net/kitty/binary/>
+
 - Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim>
 - Install LunarVim on top of it <https://www.lunarvim.org/docs/installation>
 - I switch to the master branch of lvim
