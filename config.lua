@@ -157,6 +157,14 @@ lvim.plugins = {
     end
   },
   { "ThePrimeagen/harpoon" },
+  { "LunarVim/lvim-themes",
+    config = function()
+      require("lvim-themes").setup({
+        theme = "flat",
+        telescope = { set_highlights = true },
+      })
+    end
+  },
   {
     "gbprod/cutlass.nvim",
     config = function()
