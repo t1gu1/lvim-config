@@ -30,6 +30,7 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 - I switch to the master branch of lvim
 - Then execute that blazingly fast command to replace the config: `rm -R ~/.config/lvim && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep) it will ignore files in you .ignore and things like that
+- Install The nerds-fonts include in this repo (Be sure to use it in your terminal font config)
 - When you launch lvim the first time install the packer plugins.
 - Install your Mason things with `:Mason`
 - Close lvim and open it again. Now do a `:checkhealth` to check if you have some issues/missing dependency from your OS.
@@ -41,7 +42,6 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 - :TSUpdate vim
 - :TSUpdate lua
 - :TSUpdate markdown (etc, it will show you the list)
-- Install the nerdsFont from neovim site! https://www.lunarvim.org/docs/configuration/nerd-fonts
 - On mac use iTerm2 (Linux is perfect on a base terminal)
 
 ## Basic nice commands
