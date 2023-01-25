@@ -27,8 +27,11 @@ P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
 
 - Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim>
 - Install LunarVim on top of it <https://www.lunarvim.org/docs/installation>
-- Copy your old lvim folder just to be safe (Not required) `mv ~/.config/lvim ~/.config/lvim-old && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
+- I switch to the master branch of lvim
 - Then execute that blazingly fast command to replace the config: `rm -R ~/.config/lvim && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
+- When you launch lvim the first time install the packer plugins.
+- Install your Mason things with `:Mason`
+- Close lvim and open it again. Now do a `:checkHealth` to check if you have some issues/missing dependency from your OS.
 
 ## Basic nice commands
 
