@@ -163,13 +163,18 @@ lvim.plugins = {
   {
     "gbprod/cutlass.nvim",
     config = function()
-      require("cutlass").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
+      require("cutlass").setup()
     end
-  }
+  },
+  { 'echasnovski/mini.nvim',
+    config = function()
+      require("mini.indentscope").setup()
+      require('mini.move').setup()
+      require('mini.surround').setup()
+      -- sa to add sourroud (visual mode)
+      -- sd to remove sourround (visual or normal mode)
+      -- saiw to add sourround from normal mode
+    end }
 }
 
 lvim.keys.visual_mode["<leader>d"] = "d"
