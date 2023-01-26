@@ -13,15 +13,17 @@
 
 Most of the plugins are listed hehere: <https://www.lunarvim.org/docs/plugins/extra-plugins>
 
-- auto-save
 - git-blame
-- diffview
 - nvim-specter
 - trouble
 - lsp_signature <- so nice
 - goto-preview <- sooo nice
+- Harpoon <- To be Blazingly fast
+- Mini sourround
+- package-info
+- cutlass <- Better Telescope view/preview!
 
-P.S. Everything is accesible if you do `<leader>` and you wait 2 seconds.
+P.S. Almost everything is accesible if you do `<leader>` and you wait 2 seconds. (popup will show you shortcuts)
 
 ## How to setup
 
@@ -94,5 +96,7 @@ It's faster and display things correctly.
 
 ## What I would love to add
 
-- Something to preview or inline png/svg images (Require other terminal and the result wasn't worth for now)
-- harpoon plugin (Seems like The PrimeaGen will rework it.. So I'll just wait for now)
+
+- Add a one line command to install all require packages (like ripgrep) on mac and Linux
+- (⚠️ The complexity for the result isn't worth for now) Something to preview or inline png/svg images 
+- (✅ Done) harpoon plugin
