@@ -1,6 +1,11 @@
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = true
+lvim.format_on_save = {
+  enabled = true,
+  pattern = "*",
+  patterns = "*",
+  timeout = 2300
+}
 lvim.colorscheme = "lunar"
 vim.opt.showmode = true
 vim.opt.relativenumber = true
@@ -63,7 +68,6 @@ lvim.builtin.which_key.mappings["l"]["f"] = {
   "Format",
 }
 
-vim.lsp.buf.format({ timeout_ms = 5000 })
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
