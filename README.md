@@ -38,10 +38,14 @@ It's faster and display things correctly.
 - Then execute that blazingly fast command to replace the config: `rm -R ~/.config/lvim && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep) it will ignore files in you .ignore and things like that
 - Install The nerds-fonts include in this repo (Be sure to use it in your terminal font config)
-- When you launch lvim the first time install the packer plugins.
+- When you launch lvim the first time install the packer plugins. (Be on the master on lvim before) (I should provide the command line for that)
 - Install your Mason things with `:Mason`
 - Close lvim and open it again. Now do a `:checkhealth` to check if you have some issues/missing dependency from your OS.
 - If you fix an issue close lvim before another `:checkhealth`
+
+## Mason things I personally install
+
+![image](https://user-images.githubusercontent.com/12479055/214904340-60716a85-494a-409b-81d2-9046d1d444b8.png)
 
 ## Issue I got with a checkhealth or other that can fix easly
 
@@ -98,5 +102,6 @@ It's faster and display things correctly.
 
 
 - Add a one line command to install all require packages (like ripgrep) on mac and Linux
+- Add command line to switch to the master brach of LunarVim or a specefic commit id
 - (⚠️ The complexity for the result isn't worth for now) Something to preview or inline png/svg images 
 - (✅ Done) harpoon plugin
