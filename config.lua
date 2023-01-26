@@ -173,6 +173,11 @@ lvim.plugins = {
       -- sd to remove sourround (visual or normal mode)
       -- saiw to add sourround from normal mode
     end
+  },
+  { "vuki656/package-info.nvim",
+    config = function()
+      require("package-info").setup()
+    end
   }
 }
 
