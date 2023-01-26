@@ -56,6 +56,15 @@ lvim.builtin.which_key.mappings["h"] = {
   t = { "<cmd>:lua require('harpoon.ui').nav_file(5)<cr>", "Go to 5" },
 }
 
+lvim.builtin.which_key.mappings["l"]["f"] = {
+  function()
+    require("lvim.lsp.utils").format { timeout_ms = 4000 }
+  end,
+  "Format",
+}
+
+vim.lsp.buf.format({ timeout_ms = 5000 })
+
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -104,17 +113,7 @@ formatters.setup {
 -- Additional Plugins
 lvim.plugins = {
   {
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup({ write_delay = 10000 })
-    end,
-  },
-  {
     "f-person/git-blame.nvim"
-  },
-  {
-    "sindrets/diffview.nvim",
-    event = "BufRead",
   },
   {
     "windwp/nvim-spectre",
@@ -143,11 +142,6 @@ lvim.plugins = {
         debug = false; -- Print debug information
         opacity = nil; -- 0-100 opacity level of the floating window where 100 is fully transparent.
         post_open_hook = nil -- A function taking two arguments, a buffer and a window to be ran as a hook.
-        -- You can use "default_mappings = true" setup option
-        -- Or explicitly set keybindings
-        -- vim.cmd("nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>")
-        -- vim.cmd("nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
-        -- vim.cmd("nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>")
       }
     end
   },
@@ -174,11 +168,8 @@ lvim.plugins = {
       -- sa to add sourroud (visual mode)
       -- sd to remove sourround (visual or normal mode)
       -- saiw to add sourround from normal mode
-    end }
+    end
+  }
 }
 
 lvim.keys.visual_mode["<leader>d"] = "d"
-
-
-
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
