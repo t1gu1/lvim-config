@@ -6,7 +6,13 @@ lvim.format_on_save = {
   patterns = "*",
   timeout = 3500
 }
-lvim.colorscheme = "lunar"
+
+-- Theme (<leader> sp) to see theme list
+lvim.colorscheme = "tokyonight"
+vim.g.tokyonight_style = "moon"
+vim.g.transparent_background = true
+
+
 vim.opt.showmode = true
 vim.opt.relativenumber = true
 
@@ -80,6 +86,7 @@ lvim.builtin.which_key.mappings["l"]["f"] = {
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.direction = 'horizontal'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.view.side = "left"
 
@@ -144,7 +151,7 @@ lvim.plugins = {
         height = 25; -- Height of the floating window
         default_mappings = false; -- Bind default mappings
         debug = false; -- Print debug information
-        opacity = nil; -- 0-100 opacity level of the floating window where 100 is fully transparent.
+        opacity = 30; -- 0-100 opacity level of the floating window where 100 is fully transparent.
         post_open_hook = nil -- A function taking two arguments, a buffer and a window to be ran as a hook.
       }
     end
