@@ -1,5 +1,7 @@
 # Lunar Vim config
 
+![image](https://user-images.githubusercontent.com/12479055/215344413-5468b808-6140-49e5-b1cd-6de741a3abd8.png)
+
 ## Why
 
 - I love saving my config on the cloud to get it fast if I change OS or works on another PC.
