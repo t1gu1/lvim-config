@@ -4,7 +4,7 @@ lvim.format_on_save = {
   enabled = true,
   pattern = "*",
   patterns = "*",
-  timeout = 2300
+  timeout = 3500
 }
 lvim.colorscheme = "lunar"
 vim.opt.showmode = true
@@ -63,7 +63,7 @@ lvim.builtin.which_key.mappings["h"] = {
 
 lvim.builtin.which_key.mappings["l"]["f"] = {
   function()
-    require("lvim.lsp.utils").format { timeout_ms = 4000 }
+    require("lvim.lsp.utils").format { timeout_ms = 6500 }
   end,
   "Format",
 }
