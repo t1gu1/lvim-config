@@ -2,8 +2,13 @@
 
 ![image](https://user-images.githubusercontent.com/12479055/215344413-5468b808-6140-49e5-b1cd-6de741a3abd8.png)
 
+Gradually learn with a keymaps menu (Default Vim behavior/keyMaps exclude from this menu)
+
+![image](https://user-images.githubusercontent.com/12479055/215520038-7bd22eeb-0095-4280-ab9b-88401580c9dd.png)
+
 ## Why
 
+- Easier to learn with the <leader> menu that show all keymaps
 - I love saving my config on the cloud to get it fast if I change OS or works on another PC.
 - Eslint and prettier are setup correctly to works with typescript and react (auto format on save works)
 - Few tweaks that make everything easier or remove bugs
