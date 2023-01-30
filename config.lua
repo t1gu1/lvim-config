@@ -53,6 +53,11 @@ lvim.builtin.which_key.mappings["sR"] = {
   "<cmd>lua require('spectre').open()<cr>", "Global Search and replace",
 }
 
+lvim.builtin.which_key.mappings["sO"] = {
+  ":SymbolsOutline<cr>", "Display code Symbol Outline window",
+}
+
+
 lvim.lsp.buffer_mappings.normal_mode['h'] = nil
 lvim.builtin.which_key.mappings["h"] = {
   name = "Harpoon",
@@ -185,7 +190,23 @@ lvim.plugins = {
     config = function()
       require("package-info").setup()
     end
-  }
+  }, {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+  {
+    "metakirby5/codi.vim",
+    -- cmd = "Codi",
+  },
 }
 
 lvim.keys.visual_mode["<leader>d"] = "d"
+vim.api.nvim_create_user_command('Test', 'CodiNew javascript', {})
