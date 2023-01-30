@@ -39,7 +39,7 @@ It's faster and display things correctly.
 
 <https://sw.kovidgoyal.net/kitty/binary/>
 
-- Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim>
+- Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim> (Nightly)
 - Install LunarVim on top of it <https://www.lunarvim.org/docs/installation>
 - I switch to the master branch of lvim
 - Then execute that blazingly fast command to replace the config: `rm -R ~/.config/lvim && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
