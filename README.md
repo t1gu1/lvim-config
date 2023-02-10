@@ -37,14 +37,12 @@ P.S. Almost everything is accesible if you do `<leader>` and you wait 2 seconds.
 On Mac I recommand to use Kitty terminal.
 It's faster and display things correctly.
 
-<https://sw.kovidgoyal.net/kitty/binary/>
-
-- Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim> (Nightly)
-- Install LunarVim on top of it <https://www.lunarvim.org/docs/installation>
-- I switch to the master branch of lvim
+- Install and use Kitty Terminal <https://sw.kovidgoyal.net/kitty/binary/> (On Linux you could skip that, but if you have visual problems, get it)
+- Install neoVim 8.0+ <https://github.com/neovim/neovim/wiki/Installing-Neovim> 
+- Install LunarVim on top of it <https://www.lunarvim.org/docs/installation> (Nightly <- !Important! to use the latest master branch)
 - Then execute that blazingly fast command to replace the config: `rm -R ~/.config/lvim && git clone git@github.com:t1gu1/lvim-config.git ~/.config/lvim`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep) it will ignore files in you .ignore and things like that
-- Install The nerds-fonts include in this repo (Be sure to use it in your terminal font config)
+- Install The nerds-fonts include in this repo (Be sure to use it in your terminal font config to get icons & etc)
 - When you launch lvim the first time install the packer plugins. (Be on the master branch of lvim before) (I should provide the command line for that)
 - Install your Mason things with `:Mason`
 - Close lvim and open it again. Now do a `:checkhealth` to check if you have some issues/missing dependency from your OS.
@@ -65,7 +63,7 @@ It's faster and display things correctly.
 ## Basic nice commands
 
 - First, you should learn your basic Vim keybind <https://devhints.io/vim>
-  - P.S. `d` and `dd` are modified to just remove without replacing the yank `y` value. (`cutlass` plugin)
+  - P.S. `d` and `dd` are modified to just remove **without replacing the yank** `y` buffer. (`cutlass` plugin)
   - `<leader>d` will act as the defaut `d` like a "cut".
 - Then take a look of LunarVim keybind <https://www.lunarvim.org/docs/keybind-overview>
 
