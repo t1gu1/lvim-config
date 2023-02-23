@@ -22,73 +22,6 @@ lvim.leader = "space"
 -- What make it considered as a project (if .git = a project)
 lvim.builtin.project.patterns = { ".git" }
 
--- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode['<C-t>'] = "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>"
-
-
-lvim.builtin.which_key.mappings['o'] = {
-  ":TermExec cmd='open %:p:h'<cr>",
-  "Open the current file directory"
-}
-
-lvim.lsp.buffer_mappings.normal_mode['u'] = nil
-lvim.builtin.which_key.mappings['u'] = {
-  "<cmd>Telescope undo<cr>",
-  "Open undo Tree"
-}
-
--- Menu of keymappings
-lvim.builtin.which_key.mappings["t"] = {
-  name = "Types preview",
-  d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
-  i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", "Implementation" },
-}
-
-lvim.builtin.which_key.mappings["d"] = {
-  name = "Debug helper",
-  t = { "<cmd>TroubleToggle<cr>", "trouble" },
-  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
-  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
-  q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
-  l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
-  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
-}
-
-lvim.builtin.which_key.mappings["sR"] = {
-  "<cmd>lua require('spectre').open()<cr>", "Global Search and replace",
-}
-
-lvim.builtin.which_key.mappings["sO"] = {
-  ":SymbolsOutline<cr>", "Display code Symbol Outline window",
-}
-
-
-lvim.lsp.buffer_mappings.normal_mode['h'] = nil
-lvim.builtin.which_key.mappings["h"] = {
-  name = "Harpoon",
-  m = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Mark / Add" },
-  h = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Menu toogle" },
-  b = { "<cmd>:lua require('harpoon.ui').nav_prev()<cr>", "Previous" },
-  n = { "<cmd>:lua require('harpoon.ui').nav_next()<cr>", "Next" },
-  q = { "<cmd>:lua require('harpoon.ui').nav_file(1)<cr>", "Go to 1" },
-  w = { "<cmd>:lua require('harpoon.ui').nav_file(2)<cr>", "Go to 2" },
-  e = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Go to 3" },
-  r = { "<cmd>:lua require('harpoon.ui').nav_file(4)<cr>", "Go to 4" },
-  t = { "<cmd>:lua require('harpoon.ui').nav_file(5)<cr>", "Go to 5" },
-}
-
-lvim.builtin.which_key.mappings["l"]["f"] = {
-  function()
-    require("lvim.lsp.utils").format { timeout_ms = 6500 }
-  end,
-  "Format",
-}
-
-
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
 -- lvim.builtin.theme.options.style = "storm"
@@ -99,7 +32,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = 'horizontal'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup        .view.side = "left"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -217,10 +150,25 @@ lvim.plugins = {
     config = function()
       require("telescope").load_extension("undo")
     end,
-  }
+  },
+  { "tribela/vim-transparent" },
+  { 'dcampos/nvim-snippy',
+    config = function()
+      require('snippy').setup({
+        mappings = {
+          is = {
+            ['<Tab>'] = 'expand_or_advance',
+            -- ['<S-Tab>'] = 'previous',
+          },
+          nx = {
+            ['<leader>x'] = 'cut_text',
+          },
+        },
+      })
+    end }
 }
 
-lvim.keys.visual_mode["<leader>d"] = "d"
+
 vim.api.nvim_create_user_command('Test', 'CodiNew javascript', {})
 
 lvim.builtin.telescope.extensions.undo = {
@@ -242,3 +190,74 @@ lvim.builtin.telescope.extensions.undo = {
     },
   },
 }
+
+lvim.builtin.which_key.mappings['o'] = {
+  ":TermExec cmd='open %:p:h'<cr>",
+  "Open the current file directory"
+}
+
+lvim.lsp.buffer_mappings.normal_mode['u'] = nil
+lvim.builtin.which_key.mappings['u'] = {
+  "<cmd>Telescope undo<cr>",
+  "Open undo Tree"
+}
+
+-- Menu of keymappings
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Types preview",
+  d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
+  i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", "Implementation" },
+}
+
+lvim.builtin.which_key.mappings["d"] = {
+  name = "Debug helper",
+  t = { "<cmd>TroubleToggle<cr>", "trouble" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+  l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
+lvim.builtin.which_key.mappings["sR"] = {
+  "<cmd>lua require('spectre').open()<cr>", "Global Search and replace",
+}
+
+lvim.builtin.which_key.mappings["sO"] = {
+  ":SymbolsOutline<cr>", "Display code Symbol Outline window",
+}
+
+
+lvim.lsp.buffer_mappings.normal_mode['h'] = nil
+lvim.builtin.which_key.mappings["h"] = {
+  name = "Harpoon",
+  m = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Mark / Add" },
+  h = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Menu toogle" },
+  b = { "<cmd>:lua require('harpoon.ui').nav_prev()<cr>", "Previous" },
+  n = { "<cmd>:lua require('harpoon.ui').nav_next()<cr>", "Next" },
+  q = { "<cmd>:lua require('harpoon.ui').nav_file(1)<cr>", "Go to 1" },
+  w = { "<cmd>:lua require('harpoon.ui').nav_file(2)<cr>", "Go to 2" },
+  e = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Go to 3" },
+  r = { "<cmd>:lua require('harpoon.ui').nav_file(4)<cr>", "Go to 4" },
+  t = { "<cmd>:lua require('harpoon.ui').nav_file(5)<cr>", "Go to 5" },
+}
+
+lvim.builtin.which_key.mappings["l"]["f"] = {
+  function()
+    require("lvim.lsp.utils").format { timeout_ms = 6500 }
+  end,
+  "Format",
+}
+
+-- Add your own keymapping for normal_mode
+lvim.keys.visual_mode["<leader>d"] = "d"
+
+-- Add your own keymapping for normal_mode
+lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode['<C-t>'] = "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>"
+-- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+-- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
+-- Add your own keymapping for insert_mod
+lvim.keys.insert_mode["<S-tab>"] = "<C-d>"
+
